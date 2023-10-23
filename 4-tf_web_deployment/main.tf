@@ -6,6 +6,11 @@ terraform {
     }
   }
 }
+locals {
+  tags = {
+    Name = "tf-series-3"
+  }
+}
 
 provider "aws" {
   region = "ap-southeast-1"
