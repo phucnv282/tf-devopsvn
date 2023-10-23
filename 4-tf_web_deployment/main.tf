@@ -6,14 +6,15 @@ terraform {
     }
   }
 }
+
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
 locals {
   tags = {
     Name = "tf-series-3"
   }
-}
-
-provider "aws" {
-  region = "ap-southeast-1"
 }
 
 resource "aws_s3_bucket" "static" {
